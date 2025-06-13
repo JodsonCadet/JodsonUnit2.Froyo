@@ -9,3 +9,10 @@ const flavorcount = (arr) => {
   for (const flavor of arr) {
     if (flavor in obj) {
       obj[flavor] += 1;
+ } else {
+      obj[flavor] = 1;
+    }
+  }
+  return obj;
+};
+console.table(flavorcount(flavors));
